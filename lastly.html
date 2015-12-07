@@ -1,0 +1,79 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/flick/jquery-ui.min.css' rel='stylesheet' type='text/css'>  
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="lastly.js"></script>
+  <style>
+  body{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:16px;
+  }
+  .ui-dialog {
+  	top:inherit!important;
+  	bottom:0;
+  }
+  #items-amount{
+	padding:10px 20px 10px 10px;
+	font-size:18px;
+  }
+  #other-items-amount{
+	max-width:50px;
+	padding:10px 10px;
+	font-family: 'Ubuntu', sans-serif;
+  }
+  #submit-open{
+	padding:20px 20px 20px 20px;
+	border:none;
+	text-transform:uppercase;
+	color:#f2f5f7;
+	-webkit-appearance:none;
+	font-family: 'Ubuntu', sans-serif;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVmYzFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwODhkZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+	background-size: 100%;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5fc1ff), color-stop(100%, #0088de));
+	background-image: -moz-linear-gradient(#5fc1ff 0%, #0088de 100%);
+	background-image: -webkit-linear-gradient(#5fc1ff 0%, #0088de 100%);
+	background-image: linear-gradient(#5fc1ff 0%, #0088de 100%);
+	border: 1px solid #0769a7;
+	border-radius: 3px;
+	box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.5);
+
+  }
+  ul{
+  	  border-top:1px solid rgba(7, 105, 167, .08);
+  	  padding-top:10px;
+  	  padding-bottom:5px;
+  }
+  ul li{
+  	 list-style-image: url('sqpurple.gif');
+  	 padding:5px 0px 5px 0px;
+  	 margin:0;
+  	list-style-type:none;
+  }
+
+  li:nth-child(even){
+	background: -webkit-linear-gradient(left,  rgba(242,245,247,1) 0%,rgba(125,185,232,0) 100%); 
+	background: linear-gradient(to right,  rgba(242,245,247,1) 0%,rgba(125,185,232,0) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f7', endColorstr='#007db9e8',GradientType=1 ); 
+  }
+  </style>
+</head>
+<body style="width: 680px">
+<span id="open-recent">Open last </span>
+   <span style="float:right">Other: 
+   <input type="text" maxlength="999" id="other-items-amount"/>&nbsp;
+   <button id="submit-open">Open Tabs</button></span>
+  <select id="items-amount">
+	  <option value="1">1</option><option value="2">2</option>
+	  <option value="3">3</option><option value="4">4</option>
+	  <option value="5">5</option><option value="10">10</option>
+	  <option value="15">15</option><option value="20">20</option>
+  </select>  bookmarked sites &nbsp;
+  <div id="bookmarks"></div>
+  <div id="editdialog"></div>
+  <div id="deletedialog"></div>
+  <div id="adddialog"></div>
+</body>
+</html>
