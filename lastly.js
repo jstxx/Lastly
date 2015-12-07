@@ -22,7 +22,6 @@ function createRecentList() {
   
       if(isNaN(itemlength)){
         bookmarkItems = parseInt($('#items-amount').val());
-        console.log(bookmarkItems);
       }
       
       if(bookmarkItems>0) {
